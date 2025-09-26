@@ -1,0 +1,29 @@
+{
+  "query": {
+    "pages": {
+      "21721040": {
+        "pageid": 21721040,
+        "ns": 0,
+        "title": "World War II",
+        "revisions": [
+          {
+            "user": "Historian42",
+            "timestamp": "2025-01-20T20:20:20Z"
+          },
+          {
+            "user": "WW2Nerd",
+            "timestamp": "2025-01-18T15:00:00Z"
+          },
+          {
+            "user": "Curator",
+            "timestamp": "2024-12-31T23:59:59Z"
+          },
+          {
+            "user": "Archivist",
+            "timestamp": "2024-12-01T12:00:00Z"
+          }
+        ]
+      }
+    }
+  }
+}

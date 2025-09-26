@@ -1,0 +1,21 @@
+{
+  "query": {
+    "pages": {
+      "7364": {
+        "pageid": 7364,
+        "ns": 0,
+        "title": "The Beatles",
+        "revisions": [
+          {
+            "user": "MusicFan99",
+            "timestamp": "2025-03-01T18:00:00Z"
+          },
+          {
+            "user": "Archivist",
+            "timestamp": "2025-02-27T08:10:00Z"
+          }
+        ]
+      }
+    }
+  }
+}

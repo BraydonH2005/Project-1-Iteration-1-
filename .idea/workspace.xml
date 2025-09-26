@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32c95eae-400e-401c-8275-3b8c2fafe741" name="Changes" comment="live HTTP client with my bsu email as the User Agent" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Braydon-Malcom-Project-1-Iteration-5" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Braydon-Malcom-Project-1-Iteration-5" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Braydon-Malcom-Project-1-Iteration-5" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Braydon-Malcom-Project-1-Iteration-5" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="distribution" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "BraydonH2005"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:BraydonH2005/Project-1-Iteration-1-.git",
+    "accountId": "c92f18df-528c-4dd0-8eaa-c27760030d06"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="33FHRUEKe0foeW8I3XOignIxjlT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Braydon-Malcom-Project-1-Iteration-1 [wrapper].executor": "Run",
+    "Gradle.RevisionParserCelebTopicsTest.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Braydon-Malcom-Project-1-Iteration-1 [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="wrapper" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Braydon-Malcom-Project-1-Iteration-1 [wrapper]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32c95eae-400e-401c-8275-3b8c2fafe741" name="Changes" comment="" />
+      <created>1758905891960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758905891960</updated>
+    </task>
+    <task id="LOCAL-00001" summary="this came with issues but i finally got all dependencies installed and gradle finally working with the prompter also to run when the gradlew run prompt is ran to gather article information">
+      <option name="closed" value="true" />
+      <created>1758910652252</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1758910652252</updated>
+    </task>
+    <task id="LOCAL-00002" summary="this came with issues but i finally got all dependencies installed and gradle finally working with the prompter also to run when the gradlew run prompt is ran to gather article information//">
+      <option name="closed" value="true" />
+      <created>1758910937308</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1758910937308</updated>
+    </task>
+    <task id="LOCAL-00003" summary="this came with issues but i finally got all dependencies installed and gradle finally working with the prompter also to run when the gradlew run prompt is ran to gather article information///">
+      <option name="closed" value="true" />
+      <created>1758911197022</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758911197022</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add Revision record (timestamp, username)">
+      <option name="closed" value="true" />
+      <created>1758912697493</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758912697493</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add minimal redirect fixture">
+      <option name="closed" value="true" />
+      <created>1758913018015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913018015</updated>
+    </task>
+    <task id="LOCAL-00006" summary="red test for redirect parsing">
+      <option name="closed" value="true" />
+      <created>1758913080733</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913080733</updated>
+    </task>
+    <task id="LOCAL-00007" summary="red test for redirect parsing//">
+      <option name="closed" value="true" />
+      <created>1758913136035</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913136035</updated>
+    </task>
+    <task id="LOCAL-00008" summary="parse pages + redirects + revisions">
+      <option name="closed" value="true" />
+      <created>1758913208833</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913208833</updated>
+    </task>
+    <task id="LOCAL-00009" summary="parse pages + redirects + revisions//">
+      <option name="closed" value="true" />
+      <created>1758913225924</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913225924</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add missing page fixture + test">
+      <option name="closed" value="true" />
+      <created>1758913309841</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913309841</updated>
+    </task>
+    <task id="LOCAL-00011" summary="numbered output for revisions">
+      <option name="closed" value="true" />
+      <created>1758913412061</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913412062</updated>
+    </task>
+    <task id="LOCAL-00012" summary="verify two lines with ISO timestamps">
+      <option name="closed" value="true" />
+      <created>1758913456820</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913456820</updated>
+    </task>
+    <task id="LOCAL-00013" summary=" add CLI flags and basic printing for offline runs">
+      <option name="closed" value="true" />
+      <created>1758913798064</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913798064</updated>
+    </task>
+    <task id="LOCAL-00014" summary="live HTTP client with my bsu email as the User Agent">
+      <option name="closed" value="true" />
+      <created>1758913857775</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913857775</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="this came with issues but i finally got all dependencies installed and gradle finally working with the prompter also to run when the gradlew run prompt is ran to gather article information" />
+    <MESSAGE value="this came with issues but i finally got all dependencies installed and gradle finally working with the prompter also to run when the gradlew run prompt is ran to gather article information//" />
+    <MESSAGE value="this came with issues but i finally got all dependencies installed and gradle finally working with the prompter also to run when the gradlew run prompt is ran to gather article information///" />
+    <MESSAGE value="add Revision record (timestamp, username)" />
+    <MESSAGE value="add minimal redirect fixture" />
+    <MESSAGE value="red test for redirect parsing" />
+    <MESSAGE value="red test for redirect parsing//" />
+    <MESSAGE value="parse pages + redirects + revisions" />
+    <MESSAGE value="parse pages + redirects + revisions//" />
+    <MESSAGE value="add missing page fixture + test" />
+    <MESSAGE value="numbered output for revisions" />
+    <MESSAGE value="verify two lines with ISO timestamps" />
+    <MESSAGE value=" add CLI flags and basic printing for offline runs" />
+    <MESSAGE value="live HTTP client with my bsu email as the User Agent" />
+    <option name="LAST_COMMIT_MESSAGE" value="live HTTP client with my bsu email as the User Agent" />
+  </component>
+</project>

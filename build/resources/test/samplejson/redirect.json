@@ -1,0 +1,27 @@
+{
+  "query": {
+    "redirects": [
+      {
+        "from": "Zappa",
+        "to": "Frank Zappa"
+      }
+    ],
+    "pages": {
+      "10672": {
+        "pageid": 10672,
+        "ns": 0,
+        "title": "Frank Zappa",
+        "revisions": [
+          {
+            "user": "UserA",
+            "timestamp": "2025-08-13T22:47:03Z"
+          },
+          {
+            "user": "UserB",
+            "timestamp": "2025-08-13T20:25:31Z"
+          }
+        ]
+      }
+    }
+  }
+}
