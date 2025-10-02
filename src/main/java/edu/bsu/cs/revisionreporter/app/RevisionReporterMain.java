@@ -1,13 +1,11 @@
-
 package edu.bsu.cs.revisionreporter.app;
 
+import com.jayway.jsonpath.DocumentContext;
+import com.jayway.jsonpath.JsonPath;
 import edu.bsu.cs.revisionreporter.model.Revision;
 import edu.bsu.cs.revisionreporter.parse.RevisionFormatter;
 import edu.bsu.cs.revisionreporter.parse.RevisionParser;
 import edu.bsu.cs.revisionreporter.wikipedia.WikipediaClient;
-
-import com.jayway.jsonpath.DocumentContext;
-import com.jayway.jsonpath.JsonPath;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,7 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
+
 import java.util.Scanner;
 
 public final class RevisionReporterMain {
@@ -45,34 +43,30 @@ public final class RevisionReporterMain {
             }
             try (Scanner scanner = new Scanner(System.in)) {
                 System.out.print("Enter Wikipedia article title: ");
-                if (scanner.hasNextLine()) {
-                    title = scanner.nextLine().trim();
-                } else {
-                    System.err.println("Error: No input received. Use --title=<Article>.");
-                    return;
-                }
+                if (scanner.hasNextLine()) title = scanner.nextLine().trim();
             }
         }
-        if (title.isEmpty()) {
+        if (title == null || title.isBlank()) {
             System.err.println("Error: No article name provided.");
             return;
         }
 
-        RevisionParser parser = new RevisionParser();
-        try (InputStream in = openInputStream(offline, offlineJson, title)) {
-            RevisionParser.ParseResult result = parser.parse(in);
+        try {
+            // fetch revisions JSON
+            InputStream in = openInputStream(offline, offlineJson, title);
+
+            // parse
+            RevisionParser.ParseResult result = new RevisionParser().parse(in);
 
             if (result.pageMissing()) {
                 System.err.println("Error: No Wikipedia page found for that title.");
                 return;
             }
 
-            Optional<String> redirect = result.redirectTo();
-            String finalTitle = redirect.orElse(title);
-            redirect.ifPresent(target -> System.out.println("Redirected to " + target));
+            String finalTitle = result.redirectTo().orElse(title);
+            result.redirectTo().ifPresent(t -> System.out.println("Redirected to " + t));
 
-            // Subject info
-            System.out.println("Subject: " + finalTitle);
+
             if (!offline) {
                 try (InputStream intro = openIntro(finalTitle)) {
                     String introText = extractIntro(intro);
@@ -83,18 +77,16 @@ public final class RevisionReporterMain {
                 } catch (IOException ignored) { }
             }
 
-            // Revisions: newest first, print up to 15
-            List<Revision> revisions = result.revisions()
-                    .stream()
-                    .sorted(Comparator.comparing(Revision::timestampUtc).reversed())
-                    .toList();
+            // newest-first & cap to 15
+            List<Revision> latest =
+                    result.revisions().stream()
+                            .sorted(Comparator.comparing(Revision::timestampUtc).reversed())
+                            .limit(MAX_CHANGES)
+                            .toList();
 
-            int shown = Math.min(MAX_CHANGES, revisions.size());
-            System.out.println("Edits (up to " + MAX_CHANGES + "): " + revisions.size());
-            System.out.println("Most recent " + shown + " changes:");
-
-            RevisionFormatter formatter = new RevisionFormatter();
-            System.out.print(formatter.formatNumbered(revisions, MAX_CHANGES));
+            // format + print
+            System.out.println("=== " + finalTitle + " ===");
+            System.out.print(new RevisionFormatter().formatNumbered(latest, MAX_CHANGES));
 
         } catch (IOException e) {
             System.err.println("Network error: " + e.getMessage());
@@ -112,8 +104,7 @@ public final class RevisionReporterMain {
             }
             return new FileInputStream(offlineJson.toFile());
         } else {
-            WikipediaClient.StreamProvider provider =
-                new WikipediaClient.LiveStreamProvider(UA_EMAIL);
+            WikipediaClient.StreamProvider provider = new WikipediaClient.LiveStreamProvider(UA_EMAIL);
             try {
                 return provider.openStream(title, MAX_CHANGES);
             } catch (InterruptedException ie) {
@@ -124,8 +115,7 @@ public final class RevisionReporterMain {
     }
 
     private static InputStream openIntro(String finalTitle) throws IOException {
-        WikipediaClient.StreamProvider provider =
-            new WikipediaClient.LiveStreamProvider(UA_EMAIL);
+        WikipediaClient.StreamProvider provider = new WikipediaClient.LiveStreamProvider(UA_EMAIL);
         try {
             return provider.openIntroStream(finalTitle);
         } catch (InterruptedException ie) {
@@ -145,3 +135,4 @@ public final class RevisionReporterMain {
         }
     }
 }
+
