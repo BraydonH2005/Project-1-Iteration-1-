@@ -1,4 +1,3 @@
-
 package edu.bsu.cs.revisionreporter.wikipedia;
 
 import java.io.IOException;
@@ -11,9 +10,8 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 /**
- * HTTP client for Wikipedia's MediaWiki API.
- * We intentionally suppress IDE spell-checking on MediaWiki parameter names
- * like 'rvprop' and 'rvlimit' because they must match the API exactly.
+ * HTTP client for Wikipedia's MediaWiki API (stream-based).
+ * Keep parameter names (rvprop, rvlimit, etc.) exactly as the API expects.
  */
 @SuppressWarnings("SpellCheckingInspection")
 public final class WikipediaClient {
@@ -47,9 +45,9 @@ public final class WikipediaClient {
         @Override
         public InputStream openIntroStream(String article) throws IOException, InterruptedException {
             String encodedTitle = URLEncoder.encode(article, StandardCharsets.UTF_8);
-            String url = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro&explaintext&redirects&titles=" + encodedTitle;
-            URI uri = URI.create(url);
-            HttpRequest request = HttpRequest.newBuilder(uri)
+            String url = "https://en.wikipedia.org/w/api.php?action=query&format=json"
+                    + "&prop=extracts&exintro&explaintext&redirects&titles=" + encodedTitle;
+            HttpRequest request = HttpRequest.newBuilder(URI.create(url))
                     .header("User-Agent", "Revision Reporter/0.1 (" + userAgentEmail + ")")
                     .GET()
                     .build();
