@@ -1,4 +1,3 @@
-
 package edu.bsu.cs.revisionreporter.parse;
 
 import com.jayway.jsonpath.DocumentContext;
@@ -45,7 +44,9 @@ public final class RevisionParser {
             if (to != null) redirectTo = Optional.of(to.toString());
         }
 
-        Map<String, Object> pages = ctx.read("$.query.pages", Map.class);
+        Map<String, Object> pages = null;
+        try { pages = ctx.read("$.query.pages", Map.class); } catch (Exception ignored) {}
+
         boolean missing = false;
         List<Map<String, Object>> revisionMaps = new ArrayList<>();
 
@@ -58,7 +59,7 @@ public final class RevisionParser {
                 } else {
                     revisionMaps = revs;
                 }
-                break;
+                break; // use the first page
             }
         } else {
             missing = true;
@@ -74,3 +75,4 @@ public final class RevisionParser {
         return new ParseResult(revisions, redirectTo, missing);
     }
 }
+
